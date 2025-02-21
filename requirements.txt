@@ -1,6 +1,6 @@
 Flask>=2.0.3
 flask-cors>=3.0.10
-openai>=0.27.0
+openai==0.28.0
 Pillow>=9.0.0  # Mise à jour de Pillow
 numpy>=1.21.4
 opencv-python>=4.5.4.60
