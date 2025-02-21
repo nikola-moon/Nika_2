@@ -12,8 +12,8 @@ CORS(app)
 
 # Initialisation du client Roboflow
 CLIENT = InferenceHTTPClient(
-    api_url=os.getenv("https://detect.roboflow.com"),
-    api_key=os.getenv("z9gW5fliiH9edLVUeMtP")
+    api_url=os.getenv("ROBOFLOW_API_URL", "https://detect.roboflow.com"),
+    api_key=os.getenv("ROBOFLOW_API_KEY", "z9gW5fliiH9edLVUeMtP")
 )
 
 my_model = {
@@ -27,7 +27,7 @@ my_model = {
 }
 
 # Initialisation de l'API ChatGPT
-openai.api_key =os.getenv  ('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')
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 @app.route('/prediction', methods=['POST'])
 def model():
